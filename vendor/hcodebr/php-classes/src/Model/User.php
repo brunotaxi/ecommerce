@@ -175,7 +175,6 @@ class User extends Model{
 
 				$link = "http://www.hcodecommerce.com.br/forgot/reset?code=$code";
 					
-
 	 			$mailer = new Mailer($data["desemail"], $data["desperson"], "Redefinir Senha do SiteTeste", "forgot",
 	 				array(
 	 					"name"=>$data["desperson"],
