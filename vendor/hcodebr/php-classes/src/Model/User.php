@@ -27,7 +27,7 @@ class User extends Model{
 			//Não está logado
 			return false;
 		
-		} else if {
+		} else {
 
 			if ($inadmin === true && (bool)$_SESSION[User::SESSION]["inadmin"] === true){
 

@@ -31,7 +31,7 @@ class Cart extends Model {
 
 				if (User::checkLogin(false)) {
 
-					$user = User::getFromSession();
+					$user = User::getFromSessionID();
 
 					$data['iduser'] = $user->getiduser();
 
@@ -65,8 +65,11 @@ class Cart extends Model {
 
 		]);
 
-		$this->setData($results[0]);
-
+		if (count($results) > 0) {
+ 
+    		$this->setData($results[0]);
+ 
+		}
 	}
 
 	public function get(int $idcart){
